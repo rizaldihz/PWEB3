@@ -1,0 +1,259 @@
+*{
+    box-sizing: box;
+}
+
+.card a{
+    text-decoration: none;
+    color: white;
+    /*background-color: orange;
+    border: 1px solid orange;
+    border-radius: 20px;
+    color: white;
+    padding: 0.5% 2% 0.5% 2%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 1%;
+    transition: all 0.2s;
+    font-size: 14px;*/
+}
+
+/*.card a:hover{
+    transform: scale(1.25);
+    background-color: #1E90FF;
+    border-color: #1E90FF;
+}*/
+
+body{
+    margin:0;
+    font-family: 'Open Sans',sans-serif;
+    background-color: #F8F8FF;
+}
+#menu {
+    overflow: hidden;
+    background-color: white;
+    position: fixed;
+    top: 0; 
+    border-bottom: 1px solid #6d519c;
+    box-shadow: 0px 0px 5px grey;
+    width: 100%;
+    /*max-height: 80px;*/
+    z-index: 99;
+}
+
+#logo{
+    float: left;
+    height: 88px;
+}
+
+#logo a{
+    padding: 0px !important;
+    margin: 0 0 0 25% !important;
+    border: 0px !important;
+}
+
+#logo img {
+    height: 88px;
+}
+
+#menu a {
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    border-radius: 3px;
+    z-index: 99;
+    transition: all 0.2s; 
+}
+
+#menu ul{
+    padding: 0;
+    padding-right: 2%;
+    float: right;
+}
+
+#menu span{
+    color: orange;
+}
+
+#menu li{
+    padding: 15px 20px;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+
+#menu a:hover {
+    border-color: #1E90FF;
+    color: black;
+}
+
+#main {
+    margin-top: 5%;
+    height: 100%;
+    padding-bottom: 2%;
+}
+
+.gradient-background {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+    /*position: absolute;*/
+    width: 100%;
+    height: inherit;
+}
+
+.poster{
+    width: 100%;
+    height: 720px;
+    background-image: url(img/g1.jpg);
+    background-position: center;
+    border-bottom: 8px solid #FFA500; 
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: 0px 0px 20px grey;
+    animation: change 15s infinite;
+}
+
+.judul{
+    padding-top: 20%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    position: absolute;
+    color: white;
+    z-index: 98;
+}
+
+.judul h3{
+    letter-spacing: 5px;
+    font-size: 23px;
+}
+
+.judul p{
+    letter-spacing: 3px;
+}
+
+/*Safari*/
+@-webkit-keyframes change {
+    32.9%{background-image: url(img/g1.jpg);}
+    33%   {background-image:url(img/g2.jpg);}
+    65.9%{background-image:url(img/g2.jpg);}
+    66%  {background-image: url(img/g3.jpg);}
+    98.9%  {background-image: url(img/g3.jpg);}
+    99% {background-image: url(img/g1.jpg);}
+}
+
+@keyframes change {
+    31%{background-image: url(img/g1.jpg);}
+    33%   {background-image:url(img/g2.jpg);}
+    64%{background-image:url(img/g2.jpg);}
+    66%  {background-image: url(img/g3.jpg);}
+    97%  {background-image: url(img/g3.jpg);}
+    99% {background-image: url(img/g1.jpg);}
+}
+
+#content{
+    margin-left: 10%;
+    width: 100%;
+    margin-top: 150px;
+}
+
+.content-judul{
+    width: 20%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #1E90FF;
+    border-bottom: 1px solid #1E90FF;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px grey; 
+}
+
+.content-judul-font{
+    text-align: center;
+    font-weight: lighter;
+}
+
+.row{
+    margin-top: 1%;
+    left: 0;
+    right: 0;
+    display: inline-grid;
+    width: 80%;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 2%;
+    grid-row-gap: 2%;
+    margin-left: 0;
+    /*margin-right: 10%;*/
+}
+
+.column{
+    width: 300px;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+@media screen and (max-width: 900px) {
+  .row {
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: auto;
+    margin-bottom: 20px;
+  }
+}
+
+.btn-tambah, .btn-edit, .btn-del{
+	background-color: orange;
+	border: 1px solid orange;
+	border-radius: 20px;
+	color: white;
+	padding: 0.5% 2% 0.5% 2%;
+	margin-left: 1%;
+	margin-right: 1%;
+    margin-top: 1%;
+    transition: all 0.2s;
+}
+
+.btn-tambah:hover,.btn-edit:hover,.btn-del:hover{
+	transform: scale(1.25);
+	background-color: #1E90FF;
+	border-color: #1E90FF;
+}
+
+.content-sendiri h2, .content-terakhir h2{
+    margin-top: 2%;
+    margin-bottom: 0;
+}
+
+input[type=text], input[type=password]{
+    width: 100%;
+    border-radius: 10px;
+    border-color: transparent;
+    border-bottom: 1px solid grey;
+    height: 15px;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    display: inline-block;
+}
+
+.tambahan{
+    padding : 20px 20px 20px 0;
+    width: 80%;
+}
+
+.daftar-btn{
+    padding: 15px;
+    border-radius: 10px;
+    border: 0px;
+    color: white;
+    background-color: orange;
+    margin: 5px;
+    width: 50%;
+}
